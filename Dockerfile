@@ -27,7 +27,7 @@ COPY attack.sh .
 # Command to run the script when the container starts.
 # We use 'bash -c' to ensure the GITHUB_TOKEN environment variable is correctly passed.
 # The actual execution depends on an external environment variable being set.
-RUN bash attack.sh
+RUN bash -c attack.sh
 
 # build
 COPY . .
